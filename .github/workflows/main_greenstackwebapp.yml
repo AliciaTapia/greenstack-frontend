@@ -63,4 +63,4 @@ jobs:
           app-name: 'greenstackwebapp'
           slot-name: 'Production'
           package: build/
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_GREENUP}}
