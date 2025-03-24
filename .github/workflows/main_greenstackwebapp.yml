@@ -74,4 +74,4 @@ jobs:
           app-name: 'greenstackwebapp'
           slot-name: 'Production'
           package: build/ # Deploys only the built files
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_362EAF04215841AFA79757F76A42D972 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
