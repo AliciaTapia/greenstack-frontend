@@ -10,6 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
+  
   build:
     runs-on: ubuntu-latest
     permissions:
@@ -46,6 +47,12 @@ jobs:
             build/
             node_modules/
             package.json
+
+      - name: Set Node.js options
+        run: echo "NODE_OPTIONS=--openssl-legacy-provider" >> $GITHUB_ENV
+    
+      - name: Build project
+        run: npm run build       
 
   deploy:
     runs-on: ubuntu-latest
