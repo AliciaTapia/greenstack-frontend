@@ -22,7 +22,7 @@ function App() {
           }
         }
       );
-      
+      console.log('API Response:', response.data); // Now the variable is used
       alert('Lead submitted successfully!');
       
       // Reset form after successful submission
