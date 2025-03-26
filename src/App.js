@@ -13,7 +13,19 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
+      //removing the response assignment since it was giving us errors
+      // const response = await axios.post(
+      //   'https://greenstackfunctions-linux.azurewebsites.net/api/leadsAPI',
+      //   formData,
+      //   {
+      //     headers: {
+      //       'Content-Type': 'application/json'
+      //     }
+      //   }
+      // );
+      // console.log('API Response:', response.data); // Now the variable is used
+
+      await axios.post(
         'https://greenstackfunctions-linux.azurewebsites.net/api/leadsAPI',
         formData,
         {
@@ -22,9 +34,8 @@ function App() {
           }
         }
       );
-      console.log('API Response:', response.data); // Now the variable is used
       alert('Lead submitted successfully!');
-      
+
       // Reset form after successful submission
       setFormData({
         FirstName: '',
@@ -34,8 +45,10 @@ function App() {
         Source: ''
       });
     } catch (err) {
-      console.error('Error details:', err.response?.data || err.message);
-      alert(`Error submitting lead: ${err.response?.data?.message || err.message}`);
+      console.error('Full error object:', err);
+      console.error('Response data:', err.response?.data);
+      console.error('Response status:', err.response?.status);
+      alert(`Error: ${err.response?.data?.message || err.message}`);
     }
   };
 
