@@ -14,7 +14,7 @@ function App() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        ProcessingInstruction.env.REACT_APP_API_URL,
+        process.env.REACT_APP_API_URL,
         formData,
         {
           headers: {
