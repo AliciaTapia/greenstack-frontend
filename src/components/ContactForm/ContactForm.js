@@ -16,7 +16,7 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    if (!/^\w+@\w+\.\w+$/.test(formData.Email)) {
+    if (!/^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,}$/(formData.Email)) {
       setError('Please enter a valid email (e.g., user@example.com)');
       return;
     }
