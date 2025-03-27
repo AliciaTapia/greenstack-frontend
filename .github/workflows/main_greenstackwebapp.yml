@@ -41,6 +41,12 @@ jobs:
         with:
           name: build-artifacts
           path: build/
+    
+      - name: Cache node modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: \${{ runner.os }}-node-\${{ hashFiles('package-lock.json') }}
 
   deploy:
     runs-on: ubuntu-latest
