@@ -1,0 +1,38 @@
+.services {
+    padding: 4rem 2rem;
+    background-color:hsl(210, 17%, 98%);
+    text-align: center;
+  }
+  
+  .serviceList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .serviceCard {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 280px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .serviceCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  @media (max-width: 768px) {
+    .serviceList {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .serviceCard {
+      width: 100%;
+      max-width: 350px;
+    }
+  }

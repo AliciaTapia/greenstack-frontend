@@ -1,0 +1,51 @@
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../src/assets/images/desing.webp');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 0 2rem;
+  }
+  
+  .heroContent {
+    max-width: 800px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .ctaButton {
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .ctaButton:hover {
+    background-color: var(--secondary-green);
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      height: 50vh;
+    }
+    
+    .hero h1 {
+      font-size: 2rem;
+    }
+  }
