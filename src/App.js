@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React from 'react';
+//import axios from 'axios';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
