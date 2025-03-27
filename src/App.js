@@ -12,6 +12,12 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+     // Validate email format
+  if (!/^\w+@\w+\.\w+$/.test(formData.Email)) {
+    alert('Please enter a valid email (e.g., user@example.com)');
+    return;
+  }
     try {
       //removing the response assignment since it was giving us errors
       // const response = await axios.post(
